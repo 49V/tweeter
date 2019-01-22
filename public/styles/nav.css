@@ -7,13 +7,13 @@
   padding: 0 2em;
 }
 
-.logo {
+#nav-bar .logo {
   float: left;
   height: 80px;
   width: 80px;
 }
 
-.header {
+#nav-bar .header {
   float: left;
   font-size: 2em;
   line-height: 1.5em;
