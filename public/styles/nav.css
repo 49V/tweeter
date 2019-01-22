@@ -5,9 +5,18 @@
   background-color: #00a087;
   color: #e8fdff;
   padding: 0 2em;
-};
+}
 
-#nav-bar img {
+.logo {
+  float: left;
   height: 80px;
   width: 80px;
 }
+
+.header {
+  float: left;
+  font-size: 2em;
+  line-height: 1.5em;
+  padding: 2% 0;
+}
+
