@@ -1,4 +1,4 @@
-#nav-bar{
+#nav-bar {
   position: fixed;
   height: 80px;
   width: 100%;
@@ -6,3 +6,8 @@
   color: #e8fdff;
   padding: 0 2em;
 };
+
+#nav-bar img {
+  height: 80px;
+  width: 80px;
+}
