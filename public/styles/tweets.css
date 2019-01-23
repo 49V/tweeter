@@ -25,10 +25,6 @@
 
 .tweets {
   margin: 2em 2em;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: thin;
-  border-color: #cbcbcb;
 }
 
 .tweets .icon {
@@ -41,9 +37,21 @@
   margin-right: 15px;
 }
 
-.tweets:hover .icon {
+article.tweet:hover {
+  border-color: #a7a4a4;
+}
+
+article.tweet:hover .icon {
   visibility: visible;
 }
+
+article.tweet {
+  border-radius: 5px;
+  border: 1px solid #cbcbcb;
+  margin: 10px 0px;
+  padding: 1px;
+}
+
 
 article.tweet header{
   background-color: #eeeeee;
