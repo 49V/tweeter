@@ -1,0 +1,95 @@
+.new-tweet {
+  margin: 2em 2em;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #cbcbcb;
+  padding: 10px;
+}
+
+.new-tweet h2 {
+  border-bottom: 1px solid black;
+}
+
+.new-tweet textarea {
+  color: #8d8d8d;
+  display: block;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.new-tweet .counter {
+  float: right;
+}
+
+.tweets {
+  margin: 2em 2em;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #cbcbcb;
+}
+
+.tweets .icon {
+  float: right;
+  height: 20px;
+  line-height: 20px;
+  visibility: hidden;
+  width: 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.tweets:hover .icon {
+  visibility: visible;
+}
+
+article.tweet header{
+  background-color: #eeeeee;
+  padding: 5px;
+}
+
+article.tweet header:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+article.tweet .body {
+  background-color: white;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0px 10px;
+}
+
+article.tweet footer {
+  background-color: white;
+  color: #31535d;
+  font-size: 0.75em;
+  padding: 0px 5px;
+}
+
+article.tweet .timestamp {
+  display: inline-block;
+}
+
+article.tweet .profile-picture {
+  float: left;
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+article.tweet .name {
+  float: left;
+  font-size: 2em;
+  line-height: 1.5em;
+
+}
+
+article.tweet .username {
+  color: #9f9f9f;
+  float: right;
+  line-height: 4em;
+}
