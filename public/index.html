@@ -35,6 +35,8 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets" id="tweetMaker" method="POST">
           <textarea id="tweet-content" name="text" maxlength="140" placeholder="What are you humming about?"></textarea>
+          <!-- Error elements rendered here by app.js -->
+          <div id="error-messages"></div>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>

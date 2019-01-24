@@ -122,3 +122,14 @@ article.tweet .username {
   cursor: move;
   opacity: 1;
 }
+
+#error-messages {
+  background-color: #f5e0e1;
+  border: 1px solid red;
+  border-radius: 3px;
+  color: #9c4025;
+  margin: 15px;
+  opacity: 0.5;
+  padding: 5px;
+  visibility: hidden;
+}
