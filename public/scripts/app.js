@@ -62,10 +62,16 @@ $(() => {
     let content = $('#tweet-content').val();
 
     if (content.length > maxLength) {
-      return alert("Max tweet length is 140 characters");
+      $('#error-messages').css({visibility: "visible"}).slideDown('slow');
+      $('#error-messages').text("Max tweet length is 140 characters");
+      return;
     } else if (!content) {
-      return alert("Cannot submit an empty tweet");
+      $('#error-messages').css({visibility: "visible"}).slideDown('slow');;
+      $('#error-messages').text("Cannot submit an empty tweet");
+      return;
     }
+
+    $('#error-messages').css({visibility: "hidden"}).slideUp('slow');
 
     const serialized = $(this).serialize();
 
