@@ -34,7 +34,7 @@ app.get("/tweets", (request, response) => {
 });
 
 app.post("/tweets", (request, response) => {
-  console.log("Entered tweets handler");
+  response.send("BEANS");
 });
 
 app.listen(PORT, () => {

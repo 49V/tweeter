@@ -90,23 +90,38 @@ $(() => {
     $.ajax( {
       method: "GET",
       url: "/tweets"
-    }).then (function (tweets) {
+    }) .then (function (tweets) {
       renderTweets(tweets);
     });
   }
 
 
   $('#tweetMaker').on('submit', function(event) {
+
     event.preventDefault();
+
+    const maxLength = 140;
+    let content = $('#tweetcontent').val();
+
+    if (content.length > maxLength) {
+      return alert("Max tweet length is 140 characters");
+    } else if (!content) {
+      return alert("Cannot submit an empty tweet");
+    }
 
     const serialized = $(this).serialize();
 
     $.ajax({
       method: "POST",
       url: "/tweets",
-      data: serialized
-    }).done (function () {
-    });
+      data: serialized,
+      success: function(result){
+        
+      },
+      error: function(err){
+
+      }
+    }) 
   });
 
   loadTweets();
