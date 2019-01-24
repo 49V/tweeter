@@ -23,8 +23,8 @@ body {
 
 main {
   background-color: white;
-  margin: 0 25%;
-  position: absolute;
+  margin: 0 auto;
+  position: relative;
   top: 80px;
   width: 450px;
 }
