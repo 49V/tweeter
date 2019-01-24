@@ -103,3 +103,22 @@ article.tweet .username {
   float: right;
   line-height: 4em;
 }
+
+#compose {
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-width: thin;
+  color: #099a83;
+  float: right;
+  height: 60px;
+  margin-top: 11px;
+  opacity: 0.9;
+  width: 7em;
+}
+
+#compose:hover {
+  color: black;
+  cursor: move;
+  opacity: 1;
+}

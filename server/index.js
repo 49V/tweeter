@@ -33,10 +33,6 @@ app.get("/tweets", (request, response) => {
   response.send(DataHelpers.getTweets());
 });
 
-app.post("/tweets", (request, response) => {
-  response.send("BEANS");
-});
-
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });

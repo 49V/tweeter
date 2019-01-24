@@ -82,7 +82,7 @@ $(() => {
 
   function renderTweets(tweets) {
     for (let tweet of tweets) {
-      $(".tweets").append(createTweetElement(tweet));
+      $(".tweets").prepend(createTweetElement(tweet));
     }
   }
 
@@ -116,7 +116,7 @@ $(() => {
       url: "/tweets",
       data: serialized,
       success: function(result){
-        
+        loadTweets();
       },
       error: function(err){
 
