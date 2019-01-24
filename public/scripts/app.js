@@ -48,7 +48,10 @@ $(() => {
   }
 
   $('#compose').on('click', function(event) {
-    $('#tweet-composer').slideToggle('slow');
+    $('#tweet-composer').slideToggle('slow',
+    function() {
+      $('#tweet-content').focus();
+    });
   });
 
   $('#tweetMaker').on('submit', function(event) {
@@ -56,7 +59,7 @@ $(() => {
     event.preventDefault();
 
     const maxLength = 140;
-    let content = $('#tweetcontent').val();
+    let content = $('#tweet-content').val();
 
     if (content.length > maxLength) {
       return alert("Max tweet length is 140 characters");
