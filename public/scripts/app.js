@@ -86,26 +86,30 @@ $(() => {
     }
   }
 
-  $('#tweetMaker').on('submit', function(event) {
+  function loadTweets() {
+    $.ajax( {
+      method: "GET",
+      url: "/tweets"
+    }).then (function (tweets) {
+      renderTweets(tweets);
+    });
+  }
 
-    // event.preventDefault();
+
+  $('#tweetMaker').on('submit', function(event) {
+    event.preventDefault();
 
     const serialized = $(this).serialize();
-    console.log(serialized);
 
     $.ajax({
       method: "POST",
       url: "/tweets",
       data: serialized
     }).done (function () {
-      // DO something 
     });
-
   });
 
-  //Append to page eventually.
-  renderTweets(data);
-
+  loadTweets();
 });
 
 
