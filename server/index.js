@@ -9,13 +9,10 @@ MongoClient.connect(MONGODB_URI, (error, db) => {
     throw error;
   }
 
-  // ==> We have a connection to the "test-tweets" db,
-  //     starting here.
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
 
   // Basic express setup:
-
   const PORT          = 8080;
   const express       = require("express");
   const bodyParser    = require("body-parser");

@@ -6,7 +6,6 @@ article.tweet {
   padding: 1px;
 }
 
-
 article.tweet:hover {
   border-color: #a7a4a4;
   opacity: 1;
