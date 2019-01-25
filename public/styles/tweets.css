@@ -12,7 +12,7 @@ article.tweet:hover {
   opacity: 1;
 }
 
-article.tweet:hover .icon {
+article.tweet:hover footer .icon-container {
   visibility: visible;
 }
 
@@ -84,6 +84,10 @@ article.tweet .username {
   opacity: 1;
 }
 
+.container {
+  padding: 5px 0;
+}
+
 #error-messages {
   background-color: #f5e0e1;
   border: 1px solid red;
@@ -95,9 +99,21 @@ article.tweet .username {
   visibility: hidden;
 }
 
-.container {
-  padding: 5px 0;
+i {
+  margin: 0 5px;
 }
+
+.icon-container {
+  float: right;
+  opacity: 0.75;
+  padding: 10px 10px;
+  visibility: hidden;
+}
+
+.icon-link {
+  color: #00a087;
+}
+
 
 .new-tweet {
   margin: 2em 2em;

@@ -26,9 +26,15 @@ $(() => {
     
     const footer = $("<footer>").appendTo(newTweet);
     const timestamp = $("<p>").addClass("timestamp").text(formattedTime).appendTo(footer);
-    const icon_like = $("<img>").addClass("icon").attr("src", path_icon_love).appendTo(footer);
-    const icon_bookmark = $("<img>").addClass("icon").attr("src", path_icon_bookmark).appendTo(footer);
-    const icon_retweet = $("<img>").addClass("icon").attr("src", path_icon_retweet).appendTo(footer);
+
+    const iconContainer = $("<span>").addClass("icon-container").appendTo(footer);
+    let iconLink;
+    iconLink = $("<a>").addClass("icon-link").attr("href", "#").appendTo(iconContainer);
+    const icon_like = $("<i>").addClass("fas fa-heart").appendTo(iconLink);
+    iconLink = $("<a>").addClass("icon-link").attr("href", "#").appendTo(iconContainer);
+    const icon_bookmark = $("<i>").addClass("fas fa-flag").appendTo(iconLink);
+    iconLink = $("<a>").addClass("icon-link").attr("href", "#").appendTo(iconContainer);
+    const icon_retweet = $("<i>").addClass("fas fa-retweet").appendTo(iconLink);
 
     return newTweet;
 
