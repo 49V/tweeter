@@ -80,6 +80,7 @@ $(() => {
     }
 
     $('#error-messages').css({visibility: "hidden"}).slideUp('slow');
+    const test = $('.new-tweet .counter').text('140');
     const serialized = $(this).serialize();
 
     $.ajax({
