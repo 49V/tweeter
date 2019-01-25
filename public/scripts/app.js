@@ -12,8 +12,10 @@ $(() => {
 
   function createTweetElement(tweet) {
 
-    let newTweet = $("<article>").addClass("tweet");
+    const newTweet = $("<article>").addClass("tweet");
+    const formattedTime = moment(tweet.created_at).fromNow();
     
+
     const header = $("<header>").appendTo(newTweet);
     const image = $("<img>").addClass("profile-picture").attr("src", tweet.user.avatars.regular).appendTo(header);
     const name = $("<span>").addClass("name").text(tweet.user.name).appendTo(header);
@@ -23,7 +25,7 @@ $(() => {
     const content = $("<p>").text(tweet.content.text).appendTo(body);
     
     const footer = $("<footer>").appendTo(newTweet);
-    const timestamp = $("<p>").addClass("timestamp").text(tweet.created_at).appendTo(footer);
+    const timestamp = $("<p>").addClass("timestamp").text(formattedTime).appendTo(footer);
     const icon_like = $("<img>").addClass("icon").attr("src", path_icon_love).appendTo(footer);
     const icon_bookmark = $("<img>").addClass("icon").attr("src", path_icon_bookmark).appendTo(footer);
     const icon_retweet = $("<img>").addClass("icon").attr("src", path_icon_retweet).appendTo(footer);
@@ -72,7 +74,6 @@ $(() => {
     }
 
     $('#error-messages').css({visibility: "hidden"}).slideUp('slow');
-
     const serialized = $(this).serialize();
 
     $.ajax({
@@ -81,6 +82,7 @@ $(() => {
       data: serialized,
       success: function(result){
         loadTweets();
+        $('#tweet-content').val('');
       },
       error: function(err){
 
