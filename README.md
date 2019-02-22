@@ -12,8 +12,6 @@ Tweeter uses a Node, Express, and MongoDB on back-end and jQuery on the front-en
 
 !["Screenshot of tweet compose box"](https://github.com/49V/tweeter/blob/master/docs/tweet-box.png)
 
-!["Screenshot of tweets"](https://github.com/49V/tweeter/blob/master/docs/tweets.png)
-
 ## Dependencies
 
 - Express
