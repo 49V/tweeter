@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter uses a Node, Express, and MongoDB on back-end and jQuery on the front-end to create a simple, single-page Twitter clone.
+Tweeter uses a Node, Express, and MongoDB on back-end and jQuery and AJAX on the front-end to create a simple, single-page Twitter clone.
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
